@@ -1,0 +1,23 @@
+README
+
+v0.0: CEF, 20190505
+
+Incomplete setup for Docker+Tensorflow
+
+Dockerfile: from TF, modified, added Jupyter+Bazel setup
+Makefile:   my Docker framework, run 
+  > make build
+  > make run
+  
+  for setting up docker
+
+bashrc: file for Docker setup
+
+Alternative Docerfiles:
+	devel-cpu-jupyter.Dockerfile
+	devel-cpu.Dockerfile
+	devel-gpu.Dockerfile
+	gpu-jupyter.Dockerfile
+
+tfmake.sh: "make" file when building TF
+

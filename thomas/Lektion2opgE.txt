@@ -1,4 +1,4 @@
-The confusion matrix utilizes multiple equations to evaluate the algorithms prediction purely on statisical data.   
+The confusion matrix utilizes multiple equations to evaluate the algorithms prediction purely on statistical data.   
 Through this exercise we have gone through some ways of evaluation: accuracy, sensitivity, F1 score, and precision.
 This helps us understand the different trade-offs of the algorithm, it might have a high accuracy but if it 
 isn't also reflected in the sensitivity in the confusion matrix, then we might need to re-evaluate the approach.  

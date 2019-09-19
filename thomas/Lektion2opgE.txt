@@ -1,0 +1,10 @@
+The confusion matrix utilizes multiple equations to value the algorithms prediction purely on statisical data.   
+Through this exercise we have gone through some of ways of testing: accuracy, sensitivity and precision.
+This helps us understand the different factors of the algorithm, it might have a high accuracy but if its 
+isnt also reflected in the sensitivity part of the confusion matrix, then we need to re-evaluate the approach.  
+These techniques will help us understand how our algorithm behaves on data, as our algorithm might have an 
+unbalanced prediction and help us spot if our algorithm is biased towards any data.
+We see through this exercise that we need human intuition to decode some of the result from the confusion matrix 
+and how to improve the algorithms prediction.
+The examples in these exercises are controlled and we have a target value to hit with our algorithms, 
+but when we start our project its nice to go through what values we can expect and se how our values can trick us. 

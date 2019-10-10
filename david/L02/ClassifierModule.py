@@ -10,7 +10,6 @@
 from sklearn.base import BaseEstimator
 import sklearn.metrics
 import numpy as np
-import sklearn.metrics
 from sklearn.datasets import fetch_openml
 
 

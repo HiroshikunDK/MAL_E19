@@ -56,7 +56,12 @@ def MNIST_GetDataSet(fetchmode=True, reshape784=True, debug=False):
         has_kerasinstalled=False
 
     if fetchmode:
-        if has_datasets_fetch_mldata:
+        if has_datasets_fetch_openml:
+            if debug:
+                print("MNIST_GetDataSet(), in fetchmode, using fetch_openml()...")
+            # scikit-learn v0.20.2
+            d = fetch_openml('mnist_784', version=1, cache=True)
+        elif has_datasets_fetch_mldata:
             if debug:
                 print("MNIST_GetDataSet(), in fetchmode, using fetch_mldata()...")
             # API Change Deprecated sklearn.datasets.fetch_mldata to be removed in 
@@ -64,11 +69,7 @@ def MNIST_GetDataSet(fetchmode=True, reshape784=True, debug=False):
             # will remain possible to load cached datasets. 
             #11466 by Joel Nothman.            
             d = fetch_mldata('MNIST original')
-        elif has_datasets_fetch_openml:
-            if debug:
-                print("MNIST_GetDataSet(), in fetchmode, using fetch_openml()...")
-            # scikit-learn v0.20.2
-            d = fetch_openml('mnist_784', version=1, cache=True)
+
         else:
             raise ImportError("neither fetch_mldata() nor fetch_openml() was found in sklearn.datasets, so load of MNIST in fetchmod will not work!")
     
@@ -100,8 +101,8 @@ def MNIST_GetDataSet(fetchmode=True, reshape784=True, debug=False):
     assert X.shape[0]==y.shape[0]
     assert y.ndim==1
      
-    assert X.dtype=='uint8'
-    assert y.dtype=='uint8'
+    #assert X.dtype=='uint8'
+    #assert y.dtype=='uint8'
           
     return X, y
 
